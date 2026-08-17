@@ -1,19 +1,14 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Noto_Sans,
-  Playfair_Display,
-} from "next/font/google";
+import { Geist, Geist_Mono, Inter, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
-const playfairDisplayHeading = Playfair_Display({
+const robotoSlabHeading = Roboto_Slab({
   subsets: ["latin"],
   variable: "--font-heading",
 });
 
-const notoSans = Noto_Sans({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,8 +36,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         geistSans.variable,
         geistMono.variable,
         "font-sans",
-        notoSans.variable,
-        playfairDisplayHeading.variable,
+        inter.variable,
+        robotoSlabHeading.variable,
       )}
     >
       <body className="min-h-full flex flex-col">{children}</body>
