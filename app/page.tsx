@@ -1,6 +1,7 @@
 import Entreprise from "@/components/entreprise";
 import Hero from "@/components/hero";
 import Metiers from "@/components/metiers";
+import Secteurs from "@/components/secteurs";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Entreprise />
       <Metiers />
+      <Secteurs />
       {/* TODO: Presentation */}
       {/* TODO: Domaine */}
       {/* TODO: Métier */}

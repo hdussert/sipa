@@ -1,3 +1,4 @@
+import Section from "@/components/section";
 import SectionTitle from "@/components/section-title";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const METIERS = [
+type Metier = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  link?: string;
+};
+
+const METIERS: Metier[] = [
   {
     icon: Wind,
     title: "Sablage industriel",
@@ -52,12 +60,7 @@ const METIERS = [
   },
 ];
 
-type MetierCardProps = {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  link?: string;
-};
+type MetierCardProps = Metier;
 
 const MetierCard = ({
   icon: Icon,
@@ -88,14 +91,14 @@ const MetierCard = ({
 
 const Metiers = () => {
   return (
-    <div className="max-w-3xl">
+    <Section>
       <SectionTitle>Nos métiers</SectionTitle>
       <div className="gap-4 grid md:grid-cols-3">
         {METIERS.map((metier, index) => (
           <MetierCard key={index} {...metier} />
         ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
