@@ -8,7 +8,7 @@ import {
 // TODO: Mobile menu
 const Navbar = () => {
   return (
-    <div className="sticky top-0 min-h-8 -mb-8 flex justify-end backdrop-blur-3xl">
+    <div className="sticky top-0 min-h-8 -mb-8 flex justify-end backdrop-blur-md">
       <NavigationMenu className="hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
