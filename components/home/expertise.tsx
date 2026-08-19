@@ -114,7 +114,7 @@ const ExpertiseSection = () => {
         De la préparation des surfaces au traitement anticorrosion, nous
         maîtrisons chaque étape de vos projets.
       </SectionDescription>
-      <div className="gap-4 grid md:grid-cols-3">
+      <div className="gap-4 grid sm:grid-cols-3">
         {METIERS.map((metier, index) => (
           <ExpertiseCard key={index} {...metier} />
         ))}

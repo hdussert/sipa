@@ -18,7 +18,7 @@ const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuLink>Métiers</NavigationMenuLink>
+            <NavigationMenuLink>Services</NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
@@ -27,10 +27,6 @@ const Navbar = () => {
 
           <NavigationMenuItem>
             <NavigationMenuLink>Réalisations</NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuLink>Contact</NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

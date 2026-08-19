@@ -12,7 +12,7 @@ const LINKS = [
   },
   {
     link: "/metiers",
-    name: "Nos métiers",
+    name: "Nos services",
   },
   {
     link: "/secteurs",
