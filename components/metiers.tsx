@@ -1,7 +1,6 @@
+import ButtonLink from "@/components/button-link";
 import Section from "@/components/section";
 import SectionTitle from "@/components/section-title";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import {
   Bot,
   CircleGauge,
@@ -12,7 +11,6 @@ import {
   ShieldCheck,
   Wind,
 } from "lucide-react";
-import Link from "next/link";
 
 type Metier = {
   icon: LucideIcon;
@@ -69,22 +67,14 @@ const MetierCard = ({
   link = "",
 }: MetierCardProps) => {
   return (
-    <div className=" text-center border shrink-0 flex flex-col gap-6 px-4 py-4 rounded items-center">
-      <Icon size={72} />
-      <div>
-        <h3 className="font-bold">{title}</h3>
-        <p>{description}</p>
-        <Link
-          className={cn(
-            buttonVariants({ variant: "link", size: "xs" }),
-            "mt-2 px-0",
-          )}
-          href={link}
-        >
-          En savoir plus
-          <Plus />
-        </Link>
-      </div>
+    <div className="border rounded backdrop-blur-xs size-full text-center shrink-0 flex flex-col gap-6 px-2 py-8 items-center">
+      <Icon size={72} className="inline" />
+      <h3 className="font-bold flex items-center gap-2">{title}</h3>
+      <p className="flex-1">{description}</p>
+      <ButtonLink href={link}>
+        En savoir plus
+        <Plus />
+      </ButtonLink>
     </div>
   );
 };
