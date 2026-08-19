@@ -61,12 +61,13 @@ const ProjectsSection = () => {
   return (
     <Section>
       <SectionTitle className="text-center">Nos réalisations</SectionTitle>
-      <SectionCatchPhrase>
-        Notre savoir-faire se mesure sur le terrain
+      <SectionCatchPhrase className="text-center">
+        Des interventions concrètes sur des ouvrages industriels
       </SectionCatchPhrase>
-      <SectionDescription>
-        Découvrez quelques-uns des projets réalisés par nos équipes dans les
-        environnements industriels, énergétiques et maritimes.
+      <SectionDescription className="text-center">
+        Découvrez quelques-uns des chantiers réalisés par SIPA en préparation de
+        surfaces, hydrodécapage, traitement anticorrosion et peinture
+        industrielle.
       </SectionDescription>
       <Carousel
         opts={{

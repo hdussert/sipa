@@ -6,19 +6,14 @@ import SectionTitle from "@/components/section-title";
 const CompanySection = () => {
   return (
     <Section>
-      <SectionTitle>L&apos;entreprise</SectionTitle>
+      <SectionTitle>Qui sommes nous ?</SectionTitle>
       <SectionCatchPhrase>
-        Protéger aujourd’hui.
-        <br />
-        Préserver pour demain.
+        Des surfaces préparées pour une protection durable
       </SectionCatchPhrase>
       <p className="text-muted-foreground mb-4">
-        SIPA intervient dans la préparation des surfaces, le traitement
-        anticorrosion et la peinture industrielle pour accompagner ses clients
-        dans la protection et la maintenance de leurs installations. Notre
-        savoir-faire repose sur des équipes qualifiées, des moyens techniques
-        performants et une connaissance des environnements industriels les plus
-        exigeants.
+        De la préparation du support à l&apos;application du revêtement, SIPA
+        intervient sur des ouvrages industriels soumis à des conditions
+        d&apos;exploitation exigeantes.
       </p>
       <ButtonLink href="/entreprise">Découvrir SIPA</ButtonLink>
     </Section>

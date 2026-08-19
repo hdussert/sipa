@@ -7,65 +7,70 @@ import Image from "next/image";
 
 type Sector = {
   image: string;
+  name: string;
   title: string;
   description: string;
-  link: string;
 };
 
 const SECTEURS: Sector[] = [
   {
+    name: "Pétrole & hydrocarbures",
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
-    title: "Industrie",
+    title: "Réservoirs et installations pétrolières",
     description:
-      "Travaux de préparation et de protection des équipements et structures industriels.",
-    link: "",
+      "Préparation et protection des réservoirs, tuyauteries et équipements soumis aux contraintes des hydrocarbures.",
   },
 
   {
+    name: "Énergie",
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
-    title: "Pétrole & hydrocarbures",
+    title: "Installations énergétiques",
     description:
-      "Interventions sur réservoirs, bacs, tuyauteries et installations liées au stockage et à la distribution.",
-    link: "",
+      "Travaux de préparation et de protection sur les équipements et structures des installations de production d'énergie.",
   },
 
   {
+    name: "Maritime & naval",
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
-    title: "Maritime & naval",
+    title: "Ouvrages exposés au milieu marin",
     description:
-      "Préparation, traitement et protection des structures et équipements navals.",
-    link: "",
+      "Traitement de structures et équipements soumis à l'humidité, au sel et à la corrosion marine.",
   },
 
   {
+    name: "Industrie & infrastructures",
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
-    title: "Infrastructures",
+    title: "Structures et équipements industriels",
     description:
-      "Traitement des structures métalliques, ouvrages et équipements exposés aux conditions climatiques ou corrosives.",
-    link: "",
+      "Préparation et protection de charpentes, structures métalliques et équipements exposés aux agressions environnementales.",
   },
 ];
 
 type SectorCardProps = Sector;
-const SectorCard = ({ image, title, description, link }: SectorCardProps) => {
+const SectorCard = ({ name, image, title, description }: SectorCardProps) => {
   return (
-    <div className="flex flex-col md:flex-row md:odd:flex-row-reverse gap-8 items-center md:odd:text-right">
-      <Image
-        src={image}
-        alt={title + "image"}
-        width={512}
-        height={512}
-        sizes="512"
-        className="rounded shadow-sm border"
-      />
-      <div>
+    <div className="md:odd:text-right md:even:text-left text-center group">
+      <h2 className="uppercase font-bold text-sm text-muted-foreground text-center mb-2 md:mb-4 border-b tracking-wider">
+        {name}
+      </h2>
+      <div className="flex flex-col md:flex-row md:group-odd:flex-row-reverse gap-8 items-center ">
+        <Image
+          src={image}
+          alt={title + "image"}
+          width={512}
+          height={512}
+          sizes="512"
+          className="rounded shadow-sm border"
+        />
         <div>
-          <h3 className="font-bold font-heading text-lg">{title}</h3>
-          <p className="text-muted-foreground">{description}</p>
+          <div>
+            <h3 className="font-bold font-heading text-lg mb-2">{title}</h3>
+            <p className="text-muted-foreground">{description}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -75,13 +80,14 @@ const SectorCard = ({ image, title, description, link }: SectorCardProps) => {
 const SectorsSection = () => {
   return (
     <Section>
-      <SectionTitle>Nos secteurs</SectionTitle>
+      <SectionTitle>NOS SECTEURS D&apos;INTERVENTION</SectionTitle>
       <SectionCatchPhrase>
-        Une expertise adaptée aux environnements les plus exigeants
+        Des services pour l&apos;industrie, l&apos;énergie et le maritime
       </SectionCatchPhrase>
       <SectionDescription>
-        Industrie, énergie, pétrole, maritime : SIPA intervient au cœur des
-        secteurs où la performance et la fiabilité sont essentielles.
+        Réservoirs, installations énergétiques, structures métalliques et
+        ouvrages navals : SIPA intervient sur des équipements exposés à la
+        corrosion et aux conditions environnementales sévères.
       </SectionDescription>
       <div className="flex flex-col gap-12">
         {SECTEURS.map((secteur, index) => (

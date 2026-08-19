@@ -7,7 +7,12 @@ type SectionProps = PropsWithChildren<{
 
 const Section = ({ children, className }: SectionProps) => {
   return (
-    <div className={cn("max-w-3xl mb-32 px-4 md:px-0", className)}>
+    <div
+      className={cn(
+        "max-w-full md:max-w-3xl mb-32 md:mb-48 px-4 md:px-0",
+        className,
+      )}
+    >
       {children}
     </div>
   );

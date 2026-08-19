@@ -12,8 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  Bot,
-  CircleGauge,
   Droplet,
   LucideIcon,
   PaintBucket,
@@ -34,37 +32,25 @@ const METIERS: Metier[] = [
     icon: Wind,
     title: "Sablage industriel",
     description:
-      "Préparation des surfaces métalliques avant application des systèmes de protection.",
+      "Préparation des surfaces métalliques par projection d'abrasif avant l'application d'un système de protection.",
   },
   {
     icon: Droplet,
-    title: "Hydrodécapage",
+    title: "Hydrodécapage & UHP",
     description:
-      "Décapage haute pression pour la préparation et la rénovation des surfaces industrielles.",
-  },
-  {
-    icon: CircleGauge,
-    title: "Hydrodécapage UHP",
-    description:
-      "Technologies très haute pression destinées aux opérations de décapage les plus exigeantes.",
-  },
-  {
-    icon: Bot,
-    title: "UHP robotisé",
-    description:
-      "Solutions robotisées permettant d'améliorer la productivité et de réduire l'exposition des opérateurs.",
+      "Décapage à haute et très haute pression pour retirer les revêtements dégradés et préparer les surfaces.",
   },
   {
     icon: PaintBucket,
     title: "Peinture industrielle",
     description:
-      "Application de systèmes de protection adaptés aux contraintes de chaque ouvrage.",
+      "Application de revêtements adaptés aux contraintes mécaniques, chimiques et environnementales des ouvrages.",
   },
   {
     icon: ShieldCheck,
-    title: "Traitement anticorrosion",
+    title: "Protection anticorrosion",
     description:
-      "Protection durable des structures et équipements métalliques contre la corrosion.",
+      "Mise en œuvre de systèmes de protection destinés à limiter la corrosion et à prolonger la durée de vie des structures.",
   },
 ];
 
@@ -91,7 +77,7 @@ const ExpertiseCard = ({
           size={64}
           className="inline bg-primary/15 backdrop-brightness-200 rounded-xl p-3 mx-auto text-primary mb-4"
         />
-        <CardTitle className="font-bold">{title}</CardTitle>
+        <CardTitle className="font-bold font-sans">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-1">
         <CardDescription>{description}</CardDescription>
@@ -108,13 +94,14 @@ const ExpertiseSection = () => {
     <Section>
       <SectionTitle className="text-center">Nos services</SectionTitle>
       <SectionCatchPhrase className="text-center">
-        Des solutions techniques adaptées
+        Des solutions adaptées à chaque étape de vos travaux
       </SectionCatchPhrase>
       <SectionDescription>
-        De la préparation des surfaces au traitement anticorrosion, nous
-        maîtrisons chaque étape de vos projets.
+        Sablage industriel, hydrodécapage, UHP, peinture industrielle et
+        traitement anticorrosion : SIPA intervient de la préparation des
+        surfaces jusqu&apos;à leur protection.
       </SectionDescription>
-      <div className="gap-4 grid sm:grid-cols-3">
+      <div className="gap-4 grid sm:grid-cols-2">
         {METIERS.map((metier, index) => (
           <ExpertiseCard key={index} {...metier} />
         ))}

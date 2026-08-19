@@ -16,13 +16,15 @@ const HeroSection = () => {
           <h2 className="text-4xl md:text-6xl font-bold font-heading mt-2">
             Préparation de surfaces et protection anticorrosion
           </h2>
-          <p className="mt-6">
-            Des solutions industrielles adaptées aux environnements les plus
-            exigeants.
+          <p className="mt-6 font-bold">
+            SIPA accompagne les industriels aux Antilles-Guyane dans leurs
+            travaux de sablage, hydrodécapage, UHP et peinture industrielle.
           </p>
-          <div className="mt-8 flex gap-2 justify-center">
-            <Button variant="outline">Découvrir</Button>
-            <Button>Contact</Button>
+          <div className="mt-8 flex flex-col md:flex-row gap-2 justify-center">
+            <Button size="lg" variant="outline">
+              Découvrir SIPA
+            </Button>
+            <Button size="lg">DEMANDER UN DEVIS</Button>
           </div>
         </Section>
       </div>

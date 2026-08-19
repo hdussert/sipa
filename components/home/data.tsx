@@ -11,7 +11,7 @@ type Data = {
 const DATAS: Data[] = [
   {
     label: "Chantiers réalisés",
-    number: "200+",
+    number: "200",
   },
 
   {
@@ -32,11 +32,11 @@ type DataProps = Data;
 
 const Data = ({ number, label }: DataProps) => {
   return (
-    <div className="text-center md:px-8 grid grid-rows-2">
+    <div className="text-center flex flex-col">
       <h4 className="text-5xl md:text-6xl font-black mb-2">{number}</h4>
-      <p className="text-muted-foreground tracking-wide uppercase font-semibold">
-        {label}
-      </p>
+      <div className="flex-1  flex items-center justify-center">
+        <p className="text-muted-foreground uppercase font-bold">{label}</p>
+      </div>
     </div>
   );
 };
@@ -45,9 +45,11 @@ const DataSection = () => {
   return (
     <Section>
       <SectionTitle>SIPA EN QUELQUES CHIFFRES</SectionTitle>
-      <SectionCatchPhrase>Acteur majeur de la protection</SectionCatchPhrase>
+      <SectionCatchPhrase>
+        Une expertise industrielle ancrée aux Antilles-Guyane
+      </SectionCatchPhrase>
       <SectionDescription></SectionDescription>
-      <div className="grid grid-cols-2 md:grid-cols-4">
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
         {DATAS.map((data, index) => (
           <Data key={index} number={data.number} label={data.label} />
         ))}
