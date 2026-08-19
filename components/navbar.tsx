@@ -9,8 +9,14 @@ import Image from "next/image";
 // TODO: Mobile menu
 const Navbar = () => {
   return (
-    <div className="top-0 z-20 absolute w-full flex justify-between bg-zinc-50 px-4 py-2">
-      <Image src="/SIPA-logo.png" alt="logo" width={135} height={92} />
+    <div className="top-0 z-20 absolute w-full flex justify-between px-4 py-2 ">
+      <Image
+        src="/SIPA-logo.png"
+        alt="logo"
+        width={155}
+        height={92}
+        className="bg-white p-2 -mt-2 -ml-4 rounded-br-2xl"
+      />
       <NavigationMenu className="hidden md:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
