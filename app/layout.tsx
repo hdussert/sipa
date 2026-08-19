@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -41,9 +42,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         robotoSlabHeading.variable,
       )}
     >
-      <body className="min-h-full flex flex-col px-4 md:px-0">
+      <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
