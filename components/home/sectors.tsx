@@ -1,17 +1,18 @@
 import ButtonLink from "@/components/button-link";
 import Section from "@/components/section";
+import SectionCatchPhrase from "@/components/section-catch-phrase";
+import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-type Secteur = {
+type Sector = {
   image: string;
   title: string;
   description: string;
   link: string;
 };
 
-const SECTEURS: Secteur[] = [
+const SECTEURS: Sector[] = [
   {
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
@@ -49,8 +50,8 @@ const SECTEURS: Secteur[] = [
   },
 ];
 
-type SecteurCardProps = Secteur;
-const SecteurCard = ({ image, title, description, link }: SecteurCardProps) => {
+type SectorCardProps = Sector;
+const SectorCard = ({ image, title, description, link }: SectorCardProps) => {
   return (
     <div className="flex flex-col md:flex-row md:odd:flex-row-reverse gap-8 items-center md:odd:text-right">
       <Image
@@ -59,33 +60,37 @@ const SecteurCard = ({ image, title, description, link }: SecteurCardProps) => {
         width={512}
         height={512}
         sizes="512"
-        className="rounded"
+        className="rounded shadow-sm border"
       />
       <div>
         <div>
-          <h3 className="font-bold">{title}</h3>
-          <p>{description}</p>
+          <h3 className="font-bold font-heading text-lg">{title}</h3>
+          <p className="text-muted-foreground">{description}</p>
         </div>
       </div>
     </div>
   );
 };
 
-const Secteurs = () => {
+const SectorsSection = () => {
   return (
     <Section>
-      <SectionTitle>Nos secteurs d&apos;intervention</SectionTitle>
+      <SectionTitle>Nos secteurs</SectionTitle>
+      <SectionCatchPhrase>
+        Une expertise adaptée aux environnements les plus exigeants
+      </SectionCatchPhrase>
+      <SectionDescription>
+        Industrie, énergie, pétrole, maritime : SIPA intervient au cœur des
+        secteurs où la performance et la fiabilité sont essentielles.
+      </SectionDescription>
       <div className="flex flex-col gap-12">
         {SECTEURS.map((secteur, index) => (
-          <SecteurCard key={index} {...secteur} />
+          <SectorCard key={index} {...secteur} />
         ))}
-        <ButtonLink href="/secteur">
-          Découvrir tous nos secteurs
-          <ArrowRight />
-        </ButtonLink>
+        <ButtonLink href="/secteur">Découvrir tous nos secteurs</ButtonLink>
       </div>
     </Section>
   );
 };
 
-export default Secteurs;
+export default SectorsSection;

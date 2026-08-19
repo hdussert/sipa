@@ -1,16 +1,26 @@
 import ButtonLink from "@/components/button-link";
 import Section from "@/components/section";
+import SectionCatchPhrase from "@/components/section-catch-phrase";
+import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Bot,
   CircleGauge,
   Droplet,
   LucideIcon,
   PaintBucket,
-  Plus,
   ShieldCheck,
   Wind,
 } from "lucide-react";
+import Image from "next/image";
 
 type Metier = {
   icon: LucideIcon;
@@ -58,38 +68,59 @@ const METIERS: Metier[] = [
   },
 ];
 
-type MetierCardProps = Metier;
+type ExpertiseCardProps = Metier;
 
-const MetierCard = ({
+const ExpertiseCard = ({
   icon: Icon,
   title,
   description,
   link = "",
-}: MetierCardProps) => {
+}: ExpertiseCardProps) => {
   return (
-    <div className="border rounded backdrop-blur-xs size-full text-center shrink-0 flex flex-col gap-6 px-2 py-8 items-center">
-      <Icon size={72} className="inline" />
-      <h3 className="font-bold flex items-center gap-2">{title}</h3>
-      <p className="flex-1">{description}</p>
-      <ButtonLink href={link}>
-        En savoir plus
-        <Plus />
-      </ButtonLink>
-    </div>
+    <Card className="text-center">
+      <Image
+        src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
+        alt={title + "image"}
+        width={512}
+        height={512}
+        sizes="512"
+      />
+
+      <CardHeader className="-mt-14">
+        <Icon
+          size={64}
+          className="inline bg-primary/15 backdrop-brightness-200 rounded-xl p-3 mx-auto text-primary mb-4"
+        />
+        <CardTitle className="font-bold">{title}</CardTitle>
+      </CardHeader>
+      <CardContent className="flex-1">
+        <CardDescription>{description}</CardDescription>
+      </CardContent>
+      <CardFooter className="justify-center">
+        <ButtonLink href={link}>En savoir plus</ButtonLink>
+      </CardFooter>
+    </Card>
   );
 };
 
-const Metiers = () => {
+const ExpertiseSection = () => {
   return (
     <Section>
-      <SectionTitle>Nos métiers</SectionTitle>
+      <SectionTitle className="text-center">Nos services</SectionTitle>
+      <SectionCatchPhrase className="text-center">
+        Des solutions techniques adaptées
+      </SectionCatchPhrase>
+      <SectionDescription>
+        De la préparation des surfaces au traitement anticorrosion, nous
+        maîtrisons chaque étape de vos projets.
+      </SectionDescription>
       <div className="gap-4 grid md:grid-cols-3">
         {METIERS.map((metier, index) => (
-          <MetierCard key={index} {...metier} />
+          <ExpertiseCard key={index} {...metier} />
         ))}
       </div>
     </Section>
   );
 };
 
-export default Metiers;
+export default ExpertiseSection;

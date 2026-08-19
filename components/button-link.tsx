@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 
@@ -14,6 +15,7 @@ const ButtonLink = ({ href, children }: ButtonLinkProps) => {
       href={href}
     >
       {children}
+      <ArrowRight data-icon="inline-end" />
     </Link>
   );
 };
