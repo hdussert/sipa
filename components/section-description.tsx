@@ -10,7 +10,9 @@ const SectionDescription = ({
   className,
 }: SectionDescriptionProps) => {
   return (
-    <h1 className={cn("text-muted-foreground mb-12", className)}>{children}</h1>
+    <h1 className={cn("text-muted-foreground mb-6 md:mb-9", className)}>
+      {children}
+    </h1>
   );
 };
 

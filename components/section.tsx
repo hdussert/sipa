@@ -9,11 +9,11 @@ const Section = ({ children, className }: SectionProps) => {
   return (
     <div
       className={cn(
-        "max-w-full md:max-w-3xl mb-32 md:mb-48 px-4 md:px-0",
+        "w-full my-6 py-12 md:my-12 md:py-16 px-4 md:px-0 bg-white shadow-xs",
         className,
       )}
     >
-      {children}
+      <div className="mx-auto max-w-full md:max-w-3xl">{children}</div>
     </div>
   );
 };

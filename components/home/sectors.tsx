@@ -53,24 +53,20 @@ const SECTEURS: Sector[] = [
 type SectorCardProps = Sector;
 const SectorCard = ({ name, image, title, description }: SectorCardProps) => {
   return (
-    <div className="md:odd:text-right md:even:text-left text-center group">
-      <h2 className="uppercase font-bold text-sm text-muted-foreground text-center mb-2 md:mb-4 border-b tracking-wider">
-        {name}
-      </h2>
-      <div className="flex flex-col md:flex-row md:group-odd:flex-row-reverse gap-8 items-center ">
+    <div className="md:odd:text-right md:even:text-left text-center group  my-9 md:my-12">
+      <SectionTitle>{name}</SectionTitle>
+      <div className="flex flex-col md:flex-row md:group-odd:flex-row-reverse gap-3 md:gap-9 items-center ">
         <Image
           src={image}
           alt={title + "image"}
           width={512}
           height={512}
           sizes="512"
-          className="rounded shadow-sm border"
+          className="rounded shadow-sm border flex-2"
         />
-        <div>
-          <div>
-            <h3 className="font-bold font-heading text-lg mb-2">{title}</h3>
-            <p className="text-muted-foreground">{description}</p>
-          </div>
+        <div className="flex-1">
+          <h3 className="font-bold font-heading text-lg mb-2">{title}</h3>
+          <p className="text-muted-foreground">{description}</p>
         </div>
       </div>
     </div>
@@ -89,7 +85,7 @@ const SectorsSection = () => {
         ouvrages navals : SIPA intervient sur des équipements exposés à la
         corrosion et aux conditions environnementales sévères.
       </SectionDescription>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col">
         {SECTEURS.map((secteur, index) => (
           <SectorCard key={index} {...secteur} />
         ))}

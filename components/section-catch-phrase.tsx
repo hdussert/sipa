@@ -12,7 +12,7 @@ const SectionCatchPhrase = ({
   return (
     <h1
       className={cn(
-        "tracking-wide font-heading text-4xl font-bold mb-6",
+        "tracking-wide font-heading leading-none text-3xl md:text-4xl font-bold mb-6",
         className,
       )}
     >
