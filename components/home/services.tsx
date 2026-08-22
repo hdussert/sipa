@@ -89,7 +89,7 @@ const ExpertiseCard = ({
   );
 };
 
-const ExpertiseSection = () => {
+const ServicesSection = () => {
   return (
     <Section>
       <SectionTitle className="text-center">Nos services</SectionTitle>
@@ -110,4 +110,4 @@ const ExpertiseSection = () => {
   );
 };
 
-export default ExpertiseSection;
+export default ServicesSection;

@@ -4,9 +4,9 @@ import SectionCatchPhrase from "@/components/section-catch-phrase";
 import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
 import Image from "next/image";
-export default function Sectors() {
+export default function Services() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-center items-center">
       <Image
         alt="Sipa-photo"
         width={2000}
@@ -15,9 +15,9 @@ export default function Sectors() {
         className="border-b-24 border-primary"
       />
       <Section>
-        <SectionTitle>NOS SECTEURS</SectionTitle>
+        <SectionTitle>NOS SERVICES</SectionTitle>
         <SectionCatchPhrase>
-          Des solutions pour les environnements industriels les plus exigeants
+          Préparer, décaper et protéger les surfaces industrielles
         </SectionCatchPhrase>
         <SectionDescription>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,
@@ -28,9 +28,9 @@ export default function Sectors() {
       </Section>
 
       <Section>
-        <SectionTitle>NOS DOMAINES D&apos;INTERVENTION</SectionTitle>
+        <SectionTitle>NOS SOLUTIONS</SectionTitle>
         <SectionCatchPhrase>
-          Une expertise adaptée à chaque environnement
+          Des techniques adaptées à chaque ouvrage
         </SectionCatchPhrase>
         <SectionDescription>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,
@@ -41,9 +41,9 @@ export default function Sectors() {
       </Section>
 
       <Section>
-        <SectionTitle>ANTILLES-GUYANE</SectionTitle>
+        <SectionTitle>NOTRE APPROCHE</SectionTitle>
         <SectionCatchPhrase>
-          Une présence au plus près de vos installations
+          De la préparation du support au contrôle final
         </SectionCatchPhrase>
         <SectionDescription>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,

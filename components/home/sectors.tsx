@@ -89,7 +89,7 @@ const SectorsSection = () => {
         {SECTEURS.map((secteur, index) => (
           <SectorCard key={index} {...secteur} />
         ))}
-        <ButtonLink href="/secteur">Découvrir tous nos secteurs</ButtonLink>
+        <ButtonLink href="/secteurs">Découvrir tous nos secteurs</ButtonLink>
       </div>
     </Section>
   );

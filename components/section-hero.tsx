@@ -5,9 +5,9 @@ type SectionProps = PropsWithChildren<{
   className?: string;
 }>;
 
-const Section = ({ children, className }: SectionProps) => {
+const SectionHero = ({ children, className }: SectionProps) => {
   return (
-    <div className="w-full my-6 py-12 md:my-12 md:py-16 px-4 md:px-0 bg-white shadow-xs">
+    <div className="w-full my-6 py-12 md:my-12 md:py-16 px-4 md:px-0">
       <div className={cn("mx-auto max-w-full md:max-w-3xl", className)}>
         {children}
       </div>
@@ -15,4 +15,4 @@ const Section = ({ children, className }: SectionProps) => {
   );
 };
 
-export default Section;
+export default SectionHero;

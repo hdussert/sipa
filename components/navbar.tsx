@@ -9,6 +9,10 @@ import Link from "next/link";
 
 const NAVBARITEMS = [
   {
+    name: "Accueil",
+    link: "/",
+  },
+  {
     name: "L'entreprise",
     link: "/entreprise",
   },

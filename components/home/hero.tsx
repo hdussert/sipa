@@ -1,19 +1,18 @@
 import ButtonCTA from "@/components/button-cta";
-import Section from "@/components/section";
+import SectionHero from "@/components/section-hero";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
     <div
-      className="w-full h-screen relative mb-16 shadow"
+      className="w-full h-screen mb-16 shadow"
       style={{
         backgroundImage: 'url("/hero.jpg")',
         backgroundSize: "cover",
       }}
     >
-      {/* <Image fill src={"/hero.jpg"} alt="hero-image" objectFit="cover" /> */}
-      <div className="relative backdrop-brightness-75 text-center flex flex-col items-center justify-center text-secondary h-screen">
-        <Section className="mb-0 bg-transparent shadow-none">
+      <div className="backdrop-brightness-75 text-center flex flex-col items-center justify-center text-secondary h-screen">
+        <SectionHero>
           <h2 className="text-4xl md:text-6xl font-bold font-heading mt-2">
             Préparation de surfaces et protection anticorrosion
           </h2>
@@ -27,7 +26,7 @@ const HeroSection = () => {
             </Button>
             <ButtonCTA />
           </div>
-        </Section>
+        </SectionHero>
       </div>
     </div>
   );

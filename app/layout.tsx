@@ -42,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         robotoSlabHeading.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-zinc-50">
         <Navbar />
         {children}
         <Footer />
