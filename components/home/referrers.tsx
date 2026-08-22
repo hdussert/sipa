@@ -62,7 +62,8 @@ const ReferrersSection = () => {
       </SectionCatchPhrase>
       <SectionDescription>
         Au fil des projets, SIPA accompagne des entreprises des secteurs
-        pétrolier, énergétique, industriel et maritime.
+        pétrolier, énergétique, industriel et maritime. Ils nous font confiance
+        :
       </SectionDescription>
       <div className="w-full overflow-hidden">
         <div className="flex w-max animate-marquee">
