@@ -1,21 +1,12 @@
 "use client";
 
-import ButtonLink from "@/components/button-link";
+import ProjectsCarousel from "@/components/home/projects-carousel";
 import Section from "@/components/section";
 import SectionCatchPhrase from "@/components/section-catch-phrase";
 import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
-import { Card, CardHeader } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Image from "next/image";
 
-type Project = {
+export type Project = {
   company: string;
   title: string;
   description: string;
@@ -69,40 +60,7 @@ const ProjectsSection = () => {
         surfaces, hydrodécapage, traitement anticorrosion et peinture
         industrielle.
       </SectionDescription>
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        className="w-full"
-      >
-        <CarouselContent>
-          {PROJECTS.map((project, index) => (
-            <CarouselItem key={index}>
-              <div className="p-1">
-                <Card>
-                  <Image
-                    height={500}
-                    width={500}
-                    objectFit="cover"
-                    src={project.image}
-                    alt={project.company + " project image"}
-                    className="w-full"
-                  />
-                  <CardHeader>
-                    <h3 className="font-bold">
-                      {project.company}: {project.title}
-                    </h3>
-                    <p>{project.description}</p>
-                    <ButtonLink href={""}>Voir</ButtonLink>
-                  </CardHeader>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="hidden md:flex" />
-        <CarouselNext className="hidden md:flex" />
-      </Carousel>
+      <ProjectsCarousel projects={PROJECTS} />
     </Section>
   );
 };
