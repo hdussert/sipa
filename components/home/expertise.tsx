@@ -5,7 +5,7 @@ import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
 import {
   Card,
-  CardContent,
+  CardAction,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -63,7 +63,7 @@ const ExpertiseCard = ({
   link = "",
 }: ExpertiseCardProps) => {
   return (
-    <Card className="text-center">
+    <Card>
       <Image
         src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
         alt={title + "image"}
@@ -72,17 +72,17 @@ const ExpertiseCard = ({
         sizes="512"
       />
 
-      <CardHeader className="-mt-14">
-        <Icon
-          size={64}
-          className="inline bg-primary/15 backdrop-brightness-200 rounded-xl p-3 mx-auto text-primary mb-4"
-        />
-        <CardTitle className="font-bold font-sans">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-1">
+      <CardHeader className="flex-1">
+        <CardAction>
+          <Icon
+            size={48}
+            className="bg-primary-foreground shadow rounded-xl p-2 mx-auto text-primary"
+          />
+        </CardAction>
+        <CardTitle className="font-bold max-w-44">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
-      </CardContent>
-      <CardFooter className="justify-center">
+      </CardHeader>
+      <CardFooter className="justify-end">
         <ButtonLink href={link}>En savoir plus</ButtonLink>
       </CardFooter>
     </Card>
@@ -101,7 +101,7 @@ const ExpertiseSection = () => {
         traitement anticorrosion : SIPA intervient de la préparation des
         surfaces jusqu&apos;à leur protection.
       </SectionDescription>
-      <div className="gap-4 grid sm:grid-cols-2">
+      <div className="gap-8 grid sm:grid-cols-2">
         {METIERS.map((metier, index) => (
           <ExpertiseCard key={index} {...metier} />
         ))}
