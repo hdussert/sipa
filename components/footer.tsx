@@ -44,17 +44,15 @@ const Footer = () => {
           </Link>
         </div>
         <div>
+          <p className="font-bold">Contact</p>
+          <br />
+          <p>05 90 86 47 51</p>
+          <p>etude971@sipa.gp</p>
+          <Separator className="my-2" />
           <p>
-            Adresse:
-            <br /> 20 C lot Moudong Sud
-            <br /> ZAC de Moudong Sud
+            20 C lot Moudong Sud
             <br /> 97122 Baie-Mahault
           </p>
-          <Separator className="my-2" />
-          <div>
-            <p>Tel: 05 90 00 00 00</p>
-            <p>email: sipa@gmail.com</p>
-          </div>
         </div>
       </div>
     </footer>
