@@ -4,21 +4,22 @@ import Section from "@/components/section";
 import SectionCatchPhrase from "@/components/section-catch-phrase";
 import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
+import AntiCorrosionSection from "@/components/services/anticorrosion";
+import ApplicationsSection from "@/components/services/applications";
 import HighPressureSection from "@/components/services/high-pressure";
 import PaintSection from "@/components/services/paint";
-import ProcessSection from "@/components/services/process";
 import SandingSection from "@/components/services/sanding";
-import Image from "next/image";
 export default function Services() {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <Image
-        alt="Sipa-photo"
-        width={2000}
-        height={2000}
-        src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
-        className="border-b-24 border-primary"
+    <div className="flex flex-col">
+      <div
+        className="h-128 border-b-8 border-primary"
+        style={{
+          backgroundImage: 'url("/hero.jpg")',
+          backgroundSize: "cover",
+        }}
       />
+
       <Section>
         <SectionTitle>NOS SERVICES</SectionTitle>
         <SectionCatchPhrase>
@@ -32,11 +33,11 @@ export default function Services() {
         <ButtonCTA />
       </Section>
 
-      <ProcessSection />
+      <ApplicationsSection />
       <SandingSection />
       <HighPressureSection />
       <PaintSection />
-
+      <AntiCorrosionSection />
       <CTASection />
     </div>
   );

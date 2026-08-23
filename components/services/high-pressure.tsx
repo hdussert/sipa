@@ -9,6 +9,29 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+
+const MACHINES = [
+  {
+    name: "FALCH - 3 000 bar",
+    description: "Pompe UHP pour les opérations de très haute pression.",
+    image:
+      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    name: "2 Robots de décapage UHP",
+    description:
+      "Pour les opérations nécessitant une automatisation du décapage.",
+    image:
+      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    name: "FALCH - 300 bar eau chaude",
+    description: "Pompe HP pour les opérations de nettoyage et de préparation",
+    image:
+      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
+  },
+];
+
 const HighPressureSection = () => {
   return (
     <Section className="text-center">
@@ -33,47 +56,21 @@ const HighPressureSection = () => {
       />
 
       <div className="flex gap-3 mt-6 flex-col md:flex-row">
-        <Card>
-          <Image
-            src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
-            className="rounded"
-            alt={""}
-            width={300}
-            height={300}
-          />
-          <CardHeader>
-            <CardTitle>Pompes Ultra Haute Pression</CardTitle>
-            <CardDescription>Pompe FALCH 3000 barres</CardDescription>
-          </CardHeader>
-        </Card>
-        <Card>
-          <Image
-            src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
-            className="rounded"
-            alt={""}
-            width={300}
-            height={300}
-          />
-          <CardHeader>
-            <CardTitle>Robots de décapage</CardTitle>
-            <CardDescription>
-              Idéal pour les travaux aux besoins spécifiques
-            </CardDescription>
-          </CardHeader>
-        </Card>
-        <Card>
-          <Image
-            src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
-            className="rounded"
-            alt={""}
-            width={300}
-            height={300}
-          />
-          <CardHeader>
-            <CardTitle>Pompes HP</CardTitle>
-            <CardDescription>Pompe 300 barres</CardDescription>
-          </CardHeader>
-        </Card>
+        {MACHINES.map((machine, index) => (
+          <Card key={index}>
+            <Image
+              src={machine.image}
+              className="rounded object-cover"
+              alt={""}
+              width={500}
+              height={300}
+            />
+            <CardHeader>
+              <CardTitle>{machine.name}</CardTitle>
+              <CardDescription>{machine.description}</CardDescription>
+            </CardHeader>
+          </Card>
+        ))}
       </div>
     </Section>
   );

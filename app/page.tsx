@@ -3,6 +3,7 @@ import CTASection from "@/components/home/cta";
 import DataSection from "@/components/home/data";
 import HeroSection from "@/components/home/hero";
 import LocationSection from "@/components/home/location";
+import ProcessSection from "@/components/home/process";
 import ProjectsSection from "@/components/home/projects";
 import ReferrersSection from "@/components/home/referrers";
 import SectorsSection from "@/components/home/sectors";
@@ -16,6 +17,7 @@ export default function Home() {
       <DataSection />
       <ServicesSection />
       <SectorsSection />
+      <ProcessSection />
       <ProjectsSection />
       <ReferrersSection />
       <LocationSection />

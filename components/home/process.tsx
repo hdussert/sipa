@@ -12,37 +12,36 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { Bubbles, ListChecks, Paintbrush, ShieldCheck } from "lucide-react";
+import { Bubbles, Paintbrush, Search, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const PROCESS_STEPS = [
   {
-    name: "1. Préparer",
-    description: "Diagnostic, décapage, nettoyage",
+    name: "1. Diagnostic",
+    description: "Analyse du support et des contraintes du chantier",
+    icon: Search,
+    image:
+      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    name: "2. Préparation",
+    description: "Sablage, hydrodécapage et préparation du support",
     icon: Bubbles,
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
   },
   {
-    name: "2. Appliquer",
-    description:
-      "Application des couches de primaire, de protection et de finition",
+    name: "3. Application",
+    description: "Application du système de protection adapté",
     icon: Paintbrush,
     image: "/hero.jpg",
   },
   {
-    name: "3. Contrôler",
-    description: "Contrôles de qualité et de conformité",
-    icon: ListChecks,
-    image: "/SIPA-logo.png",
-  },
-  {
-    name: "4. Valider",
-    description: "Votre structure est protégée",
+    name: "4. Contrôle",
+    description: "Contrôle de la qualité et de la conformité",
     icon: ShieldCheck,
-    image:
-      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
+    image: "/SIPA-logo.png",
   },
 ];
 
@@ -63,19 +62,19 @@ const ProcessSection = () => {
   }, []);
   return (
     <Section>
-      <SectionTitle>TRAITEMENT ANTICORROSION</SectionTitle>
+      <SectionTitle>NOTRE MÉTHODE</SectionTitle>
       <SectionCatchPhrase>
-        Prolonger la durée de vie des structures métalliques
+        Une intervention maîtrisée de la préparation au contrôle
       </SectionCatchPhrase>
       <SectionDescription>
-        La corrosion représente un enjeu majeur pour les structures métalliques
-        exposées à l&apos;humidité, au milieu marin, aux hydrocarbures ou aux
-        environnements industriels. SIPA met en œuvre des systèmes de
-        préparation et de revêtement destinés à protéger durablement les
-        ouvrages.
+        Chaque chantier fait l&apos;objet d&apos;une préparation adaptée à
+        l&apos;état du support, aux contraintes de l&apos;ouvrage et au système
+        de protection prévu. De l&apos;analyse initiale au contrôle final, SIPA
+        maîtrise les étapes essentielles de l&apos;intervention.
       </SectionDescription>
 
-      <div className="flex md:flex-row flex-col gap-3 md:gap-9">
+      <SectionTitle>Les 4 étapes</SectionTitle>
+      <div className="flex md:flex-row flex-col gap-3 md:gap-9 mt-3 md:mt-6">
         <div className="flex flex-1 flex-col gap-3 items-center w-full min-w-xs mx-auto">
           {PROCESS_STEPS.map((step, index) => (
             <Card

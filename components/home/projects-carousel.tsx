@@ -59,10 +59,9 @@ const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
                   <Image
                     height={500}
                     width={500}
-                    objectFit="cover"
                     src={project.image}
                     alt={project.company + " project image"}
-                    className="w-full"
+                    className="w-full object-cover"
                   />
                   <CardHeader>
                     <CardTitle>

@@ -1,4 +1,3 @@
-import EquipmentSection from "@/components/company/equipment";
 import ExpertiseSection from "@/components/company/expertise";
 import WhoAreWeSection from "@/components/company/who-are-we";
 import CTASection from "@/components/home/cta";
@@ -6,23 +5,19 @@ import Section from "@/components/section";
 import SectionCatchPhrase from "@/components/section-catch-phrase";
 import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
-import Image from "next/image";
 
 export default function Company() {
   return (
     <div className="flex flex-col">
-      <Image
-        alt="Sipa-photo"
-        width={2000}
-        height={2000}
-        src="https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80"
-        className="border-b-24 border-primary"
+      <div
+        className="h-128 bg-primary border-b-8 border-primary"
+        style={{
+          backgroundImage: 'url("/hero.jpg")',
+          backgroundSize: "cover",
+        }}
       />
-
       <WhoAreWeSection />
       <ExpertiseSection />
-      <EquipmentSection />
-
       <Section>
         <SectionTitle>NOS ENGAGEMENTS</SectionTitle>
         <SectionCatchPhrase>
