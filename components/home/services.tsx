@@ -60,7 +60,6 @@ const ExpertiseCard = ({
   icon: Icon,
   title,
   description,
-  link = "",
 }: ExpertiseCardProps) => {
   return (
     <Card>
@@ -83,7 +82,7 @@ const ExpertiseCard = ({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardFooter className="justify-end">
-        <ButtonLink href={link}>En savoir plus</ButtonLink>
+        <ButtonLink href="/services">En savoir plus</ButtonLink>
       </CardFooter>
     </Card>
   );

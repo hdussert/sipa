@@ -1,8 +1,13 @@
+import ButtonCTA from "@/components/button-cta";
 import CTASection from "@/components/home/cta";
 import Section from "@/components/section";
 import SectionCatchPhrase from "@/components/section-catch-phrase";
 import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
+import HighPressureSection from "@/components/services/high-pressure";
+import PaintSection from "@/components/services/paint";
+import ProcessSection from "@/components/services/process";
+import SandingSection from "@/components/services/sanding";
 import Image from "next/image";
 export default function Services() {
   return (
@@ -20,38 +25,17 @@ export default function Services() {
           Préparer, décaper et protéger les surfaces industrielles
         </SectionCatchPhrase>
         <SectionDescription>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,
-          labore pariatur numquam commodi asperiores, qui illum, voluptatem ex
-          sunt hic possimus quo obcaecati. Quas exercitationem, nobis esse quia
-          sint iste.
+          SIPA intervient dans la préparation des surfaces, le décapage haute et
+          ultra-haute pression et l&apos;application de revêtements industriels,
+          avec des moyens adaptés aux contraintes de chaque chantier.
         </SectionDescription>
+        <ButtonCTA />
       </Section>
 
-      <Section>
-        <SectionTitle>NOS SOLUTIONS</SectionTitle>
-        <SectionCatchPhrase>
-          Des techniques adaptées à chaque ouvrage
-        </SectionCatchPhrase>
-        <SectionDescription>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,
-          labore pariatur numquam commodi asperiores, qui illum, voluptatem ex
-          sunt hic possimus quo obcaecati. Quas exercitationem, nobis esse quia
-          sint iste.
-        </SectionDescription>
-      </Section>
-
-      <Section>
-        <SectionTitle>NOTRE APPROCHE</SectionTitle>
-        <SectionCatchPhrase>
-          De la préparation du support au contrôle final
-        </SectionCatchPhrase>
-        <SectionDescription>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique,
-          labore pariatur numquam commodi asperiores, qui illum, voluptatem ex
-          sunt hic possimus quo obcaecati. Quas exercitationem, nobis esse quia
-          sint iste.
-        </SectionDescription>
-      </Section>
+      <ProcessSection />
+      <SandingSection />
+      <HighPressureSection />
+      <PaintSection />
 
       <CTASection />
     </div>
