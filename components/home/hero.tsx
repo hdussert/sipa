@@ -11,7 +11,7 @@ const HeroSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="backdrop-brightness-75 text-center flex flex-col items-center justify-center text-secondary h-screen">
+      <div className="backdrop-brightness-90 text-center flex flex-col items-center justify-center text-secondary h-screen">
         <SectionHero>
           <h2 className="text-4xl md:text-6xl font-bold font-heading mt-2">
             Préparation de surfaces et protection anticorrosion

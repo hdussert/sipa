@@ -8,9 +8,7 @@ const CompanySection = () => {
   return (
     <Section>
       <SectionTitle>Qui sommes nous ?</SectionTitle>
-      <SectionCatchPhrase>
-        Des surfaces préparées pour une protection durable
-      </SectionCatchPhrase>
+      <SectionCatchPhrase>Nous protegeons vos structures</SectionCatchPhrase>
       <SectionDescription>
         De la préparation du support à l&apos;application du revêtement, SIPA
         intervient sur des ouvrages industriels soumis à des conditions

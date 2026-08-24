@@ -30,22 +30,6 @@ const PROJECTS: Project[] = [
     image:
       "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
   },
-  {
-    company: "SARA 3",
-    title: "Renovation des bacs 40 giga tones de litres de pétrole",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique optio laborum veniam, facilis commodi ullam asperiores culpa cumque odio consequuntur quae blanditiis, impedit ea velit harum reprehenderit incidunt, aliquam natus!",
-    image:
-      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
-  },
-  {
-    company: "SARA 4",
-    title: "Renovation des bacs 40 giga tones de litres de pétrole",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique optio laborum veniam, facilis commodi ullam asperiores culpa cumque odio consequuntur quae blanditiis, impedit ea velit harum reprehenderit incidunt, aliquam natus!",
-    image:
-      "https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80",
-  },
 ];
 
 const ProjectsSection = () => {

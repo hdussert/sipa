@@ -80,13 +80,13 @@ const ProcessSection = () => {
             <Card
               key={index}
               className={cn(
-                "w-full border transition duration-300",
+                "w-full border transition duration-300 py-3",
                 selectedStep == index
                   ? "scale-105 border-primary ring-4 ring-primary-foreground"
                   : "",
               )}
             >
-              <CardHeader>
+              <CardHeader className="px-4.5">
                 <CardTitle>{step.name}</CardTitle>
                 <CardDescription>{step.description}</CardDescription>
                 <CardAction>

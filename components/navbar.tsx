@@ -39,7 +39,7 @@ const Navbar = () => {
         href={"/"}
         className="cursor-pointer bg-white p-2 -ml-4 rounded-r-full shadow"
       >
-        <Image src="/SIPA-logo.png" alt="logo" width={120} height={50} />
+        <Image src="/SIPA-logo.png" alt="logo" width={168} height={48} />
       </Link>
 
       {/* DESKTOP */}

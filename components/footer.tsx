@@ -11,20 +11,13 @@ const LINKS = [
     name: "L'Entreprise",
   },
   {
-    link: "/metiers",
+    link: "/services",
     name: "Nos services",
   },
+
   {
-    link: "/secteurs",
-    name: "Nos secteurs",
-  },
-  {
-    link: "/realisations",
+    link: "/projets",
     name: "Réalisations",
-  },
-  {
-    link: "/contact",
-    name: "Contact",
   },
 ];
 

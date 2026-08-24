@@ -5,12 +5,12 @@ import SectionTitle from "@/components/section-title";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
-const SandingSection = () => {
+const CoatingSection = () => {
   return (
     <Section>
-      <SectionTitle>PRÉPARATION DE SURFACES</SectionTitle>
+      <SectionTitle>APPLICATION DE REVÊTEMENTS</SectionTitle>
       <SectionCatchPhrase>
-        Une préparation précise pour une protection durable
+        Des revêtements adaptés aux contraintes de chaque ouvrage
       </SectionCatchPhrase>
 
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-6">
@@ -24,10 +24,9 @@ const SandingSection = () => {
           />
         </div>
         <SectionDescription className="flex-2 md:mb-0">
-          Le sablage permet de préparer les surfaces métalliques avant
-          l&apos;application d&apos;un revêtement. SIPA réalise les opérations
-          de décapage et de préparation nécessaires pour éliminer les anciens
-          revêtements, la corrosion et les contaminants présents sur le support.
+          Après la préparation du support, SIPA applique les systèmes de
+          peinture et de protection adaptés aux caractéristiques de
+          l&apos;ouvrage et à son environnement d&apos;exploitation.
         </SectionDescription>
       </div>
 
@@ -46,9 +45,9 @@ const SandingSection = () => {
           <SectionTitle>Equipements</SectionTitle>
           <SectionDescription className="md:mb-0">
             <ul>
-              <li>Sableuses 200 litres</li>
-              <li>Burineurs pneumatiques à aiguilles</li>
-              <li>Systèmes de ventilation et d&apos;aspiration</li>
+              <li>GRACO 70:1 Pompe Airless pneumatique</li>
+              <li>WAGNER 75:1 Pompe Airless</li>
+              <li>AIRLESS 210 bar Équipement autonome</li>
             </ul>
           </SectionDescription>
         </div>
@@ -65,17 +64,16 @@ const SandingSection = () => {
           />
         </div>
         <div className="flex-2">
-          <SectionTitle>Normes</SectionTitle>
+          <SectionTitle>Controles</SectionTitle>
           <SectionDescription className="md:mb-3">
-            Le niveau de préparation est défini en fonction de l&apos;état du
-            support, du système de revêtement prévu et des spécifications du
-            chantier.
+            Les paramètres d&apos;application et les conditions de chantier sont
+            contrôlés afin de respecter les exigences du système de revêtement
+            utilisé.
           </SectionDescription>
           <div className="flex gap-2 flex-wrap">
-            <Badge variant="primary">Sa 2</Badge>
-            <Badge variant="primary">Sa 2½</Badge>
-            <Badge variant="primary">Sa 3</Badge>
-            <Badge variant="primary">ISO 8501</Badge>
+            <Badge variant="primary">Contrôle des épaisseurs</Badge>
+            <Badge variant="primary">Contrôle de l&apos;adhérence</Badge>
+            <Badge variant="primary">Contrôle visuel de l&apos;aspect</Badge>
           </div>
         </div>
       </div>
@@ -83,4 +81,4 @@ const SandingSection = () => {
   );
 };
 
-export default SandingSection;
+export default CoatingSection;

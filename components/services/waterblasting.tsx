@@ -32,7 +32,7 @@ const MACHINES = [
   },
 ];
 
-const HighPressureSection = () => {
+const WaterblastingSection = () => {
   return (
     <Section className="text-center">
       <SectionTitle>DÉCAPAGE HAUTE & ULTRA-HAUTE PRESSION</SectionTitle>
@@ -76,4 +76,4 @@ const HighPressureSection = () => {
   );
 };
 
-export default HighPressureSection;
+export default WaterblastingSection;

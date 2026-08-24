@@ -6,9 +6,9 @@ import SectionDescription from "@/components/section-description";
 import SectionTitle from "@/components/section-title";
 import AntiCorrosionSection from "@/components/services/anticorrosion";
 import ApplicationsSection from "@/components/services/applications";
-import HighPressureSection from "@/components/services/high-pressure";
-import PaintSection from "@/components/services/paint";
-import SandingSection from "@/components/services/sanding";
+import CoatingSection from "@/components/services/coatings";
+import SandblastingSection from "@/components/services/sandblasting";
+import WaterblastingSection from "@/components/services/waterblasting";
 export default function Services() {
   return (
     <div className="flex flex-col">
@@ -17,6 +17,7 @@ export default function Services() {
         style={{
           backgroundImage: 'url("/hero.jpg")',
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       />
 
@@ -32,11 +33,10 @@ export default function Services() {
         </SectionDescription>
         <ButtonCTA />
       </Section>
-
       <ApplicationsSection />
-      <SandingSection />
-      <HighPressureSection />
-      <PaintSection />
+      <SandblastingSection />
+      <WaterblastingSection />
+      <CoatingSection />
       <AntiCorrosionSection />
       <CTASection />
     </div>
